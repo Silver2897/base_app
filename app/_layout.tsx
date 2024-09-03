@@ -3,8 +3,7 @@ import { Index } from "./index";
 import { SafeAreaView } from "react-native-safe-area-context";
 import React from "react";
 
-
-export default function RootLayout() { 
+export default function RootLayout() {
   return (
     <SafeAreaView style={styles.safeArea}>
       <Index />
@@ -14,6 +13,8 @@ export default function RootLayout() {
 
 const styles = StyleSheet.create({
   safeArea: {
-    margin: 20,
+    paddingTop: 50,
+    flex: 1,
+    backgroundColor: "#e3e3e3",
   },
 });

@@ -1,20 +1,19 @@
+import { Alert, Button, Pressable, Text, View } from "react-native";
+import { TabBarIcon } from "./navigation/TabBarIcon";
+import { styles } from "./Login";
 
-import {Alert, Button, Text, View } from "react-native";
-
-export const AppPage = (props:any) => {
-
-      const onLogout = () => {
-        props.setToken('')
-        Alert.alert("Logged Out","Success")
-      }
-
-    return (
-      <View>
-        
-        <Text> 
-            Logged in
-        </Text>
-        <Button title="Log Out" onPress={() => onLogout() }></Button>
-      </View>
-    );
+export const AppPage = (props: any) => {
+  const onLogout = () => {
+    props.setToken("");
+    Alert.alert("Logged Out", "Success");
   };
+
+  return (
+    <View style={styles.View}>
+      <Text style={[styles.safeArea, styles.logoutText]}>Logged in</Text>
+      <Pressable style={styles.button} onPress={() => onLogout()}>
+        <Text style={styles.buttontext}>Log Out</Text>
+      </Pressable>
+    </View>
+  );
+};
